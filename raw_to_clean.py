@@ -56,7 +56,7 @@ df = df.filter((col("loan_status") == 0) | (col("loan_status") == 1))
 df = df.filter(col("person_income") <= 300000)
 
 # Salva como Parquet na camada trusted
-s3_output_path = "s3a://credit-risk/clean/credit_risk_cleaned.parquet"
+s3_output_path = "s3a://credit-risk/clean/"
 
 df.write.mode("overwrite").parquet(s3_output_path)
 
