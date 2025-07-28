@@ -25,8 +25,8 @@ aws s3api create-bucket \
 <img width="1062" height="498" alt="image" src="https://github.com/user-attachments/assets/51995bda-090c-43d0-aeee-76d82c060e8d" />
 
 
-4. Cria Cloud9 como ambiente de desevolvimento/teste:
-
+4. Cria Cloud9 como ambiente de desevolvimento/teste :
+Utilizaremos o Cloud9 para testar o desenvolvimento e uso de recursos da AWS.
 
 ```
 aws cloud9 create-environment-ec2 \
@@ -63,11 +63,15 @@ source ~/.bashrc
 <img width="711" height="57" alt="image" src="https://github.com/user-attachments/assets/d26eab3f-353b-4bbd-98fd-52b350e84c1e" />
 
 
-4.3. Instale o PySpark
+4.3. Instale todas bibliotecas necessárias:
 
 ```
-pip install pyspark
+pip install -r requirements.txt
+
 ```
+<img width="1039" height="482" alt="image" src="https://github.com/user-attachments/assets/23e08187-f6fb-47e1-889d-88bfa35a464d" />
+
+
 
 <img width="637" height="213" alt="image" src="https://github.com/user-attachments/assets/87c660dd-405e-4be9-b8b6-939e5f869304" />
 
@@ -95,14 +99,15 @@ wget https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.12.375/a
 
 <img width="898" height="230" alt="image" src="https://github.com/user-attachments/assets/cd3b7343-3bf8-4488-9deb-46d96ae0c7ce" />
 
-
-## Desenvolvimento
-
-1. Certificar que as credenciais estão funcionando:
+4.5 Certificar que as credenciais estão funcionando:
 
 ```
 aws sts get-caller-identity
 ```
+
+## Desenvolvimento
+
+
 
 
 ### Leitura de CSV do S3 com PySpark 
