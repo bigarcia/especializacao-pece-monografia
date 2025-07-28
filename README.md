@@ -71,6 +71,31 @@ pip install pyspark
 
 <img width="637" height="213" alt="image" src="https://github.com/user-attachments/assets/87c660dd-405e-4be9-b8b6-939e5f869304" />
 
+4.4 Instale o conector Hadoop AWS
+Crie uma pasta para os JARs:
+
+```
+mkdir -p ~/jars
+cd ~/jars
+```
+
+<img width="318" height="39" alt="image" src="https://github.com/user-attachments/assets/69000c66-e5b8-4472-9f0b-98bb6a568598" />
+
+Baixe os dois arquivos JARs:
+
+```
+wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.4/hadoop-aws-3.3.4.jar
+```
+
+<img width="863" height="185" alt="image" src="https://github.com/user-attachments/assets/bc08b7f0-95ec-4d80-99ee-d3682d9938f4" />
+
+```
+wget https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.12.375/aws-java-sdk-bundle-1.12.375.jar
+```
+
+<img width="898" height="230" alt="image" src="https://github.com/user-attachments/assets/cd3b7343-3bf8-4488-9deb-46d96ae0c7ce" />
+
+
 ## Desenvolvimento
 
 1. Certificar que as credenciais estão funcionando:
