@@ -22,7 +22,7 @@ aws s3api create-bucket \
 3. Upload do arquivo pro bucket
 
 
-<img width="766" height="413" alt="image" src="https://github.com/user-attachments/assets/0b6a86c7-bcb6-4f52-80c9-85c464b54168" />
+<img width="1062" height="498" alt="image" src="https://github.com/user-attachments/assets/51995bda-090c-43d0-aeee-76d82c060e8d" />
 
 
 4. Cria Cloud9 como ambiente de desevolvimento/teste:
