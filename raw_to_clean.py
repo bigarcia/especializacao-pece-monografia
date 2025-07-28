@@ -58,6 +58,6 @@ df = df.filter(col("person_income") <= 300000)
 # Salva como Parquet na camada trusted
 s3_output_path = "s3a://credit-risk/clean/credit_risk_cleaned.parquet"
 
-df.select("features", "label").write.mode("overwrite").parquet(s3_output_path)
+df.write.mode("overwrite").parquet(s3_output_path)
 
 print("Arquivo salvo na camada clean")
