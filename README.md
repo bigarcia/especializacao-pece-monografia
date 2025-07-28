@@ -1,7 +1,7 @@
 # especializacao-pece-monografia
 Repositório para armazenar os códigos utilizados na Monografia da Especialização em Engenharia de Dados e Big Data da Poli USP (PECE)
 
-## Configuração:
+## Configuração dos serviços da AWS:
 1. Cria um bucket
 
 ```
@@ -107,8 +107,6 @@ aws sts get-caller-identity
 
 ## Desenvolvimento
 
+Google Colab: https://colab.research.google.com/drive/1SGQZ_alVqHL72KlAceTER31iEvBM-2Q7#scrollTo=5R-t9lfd4ICs
 
-
-
-### Leitura de CSV do S3 com PySpark 
-Arquivo: main.py
+Os códigos testados no Cloud9 se encontram nesse repositório
