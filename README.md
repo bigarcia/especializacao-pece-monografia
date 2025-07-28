@@ -1,8 +1,8 @@
 # especializacao-pece-monografia
 Repositório para armazenar os códigos utilizados na Monografia da Especialização em Engenharia de Dados e Big Data da Poli USP (PECE)
 
-
-1. Create bucket
+## Configuração:
+1. Cria um bucket
 
 ```
 aws s3api create-bucket \
@@ -11,21 +11,21 @@ aws s3api create-bucket \
 ```
 <img width="985" height="542" alt="Captura de Tela 2025-07-28 às 11 30 51" src="https://github.com/user-attachments/assets/8e01f526-4dd5-4bda-8650-bf80f0e53d2e" />
 
+ 
 
-
-2. Download file from https://www.kaggle.com/datasets/laotse/credit-risk-dataset?resource=download
+ 2. Download arquivo do site do Kaggle: https://www.kaggle.com/datasets/laotse/credit-risk-dataset?resource=download
 
 
 <img width="956" height="422" alt="image" src="https://github.com/user-attachments/assets/ce5a972d-5164-4ba7-be4b-b732bd557bd5" />
 
 
-3. Upload to bucket
+3. Upload do arquivo pro bucket
 
 
 <img width="766" height="413" alt="image" src="https://github.com/user-attachments/assets/0b6a86c7-bcb6-4f52-80c9-85c464b54168" />
 
 
-4. Create Cloud9 for development propose:
+4. Cria Cloud9 como ambiente de desevolvimento/teste:
 
 
 ```
@@ -38,3 +38,47 @@ aws cloud9 create-environment-ec2 \
   --image-id amazonlinux-2-x86_64
 ```
 <img width="1021" height="636" alt="Captura de Tela 2025-07-28 às 11 39 02" src="https://github.com/user-attachments/assets/bd178055-45c0-457e-83f2-1eccc6f7db6a" />
+
+4.1. Atualize pacotes e instale Java (requisito do Spark)
+
+```
+sudo yum update -y
+```
+
+<img width="680" height="560" alt="image" src="https://github.com/user-attachments/assets/f2410b08-8f36-4611-8baa-5d5e836fe34e" />
+
+```
+sudo yum install java-11-amazon-corretto -y
+```
+<img width="838" height="577" alt="image" src="https://github.com/user-attachments/assets/bdcf1828-2214-4a33-929f-5abe94554c05" />
+
+
+4.2. Configure variável de ambiente para Java
+
+```
+echo 'export JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto' >> ~/.bashrc
+echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+<img width="711" height="57" alt="image" src="https://github.com/user-attachments/assets/d26eab3f-353b-4bbd-98fd-52b350e84c1e" />
+
+
+4.3. Instale o PySpark
+
+```
+pip install pyspark
+```
+
+<img width="637" height="213" alt="image" src="https://github.com/user-attachments/assets/87c660dd-405e-4be9-b8b6-939e5f869304" />
+
+## Desenvolvimento
+
+1. Certificar que as credenciais estão funcionando:
+
+```
+aws sts get-caller-identity
+```
+
+
+### Leitura de CSV do S3 com PySpark 
+Arquivo: main.py
